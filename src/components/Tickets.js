@@ -11,7 +11,9 @@ function Tickets(props) {
               <i className="fa fa-support fa-5x"></i>
             </div>
             <div className="col-xs-9 text-right">
-              <div className="huge">{props.tickets}</div>
+              <div className="huge">
+                {props.tickets}
+              </div>
               <div>Support Tickets!</div>
             </div>
           </div>
@@ -28,10 +30,10 @@ function Tickets(props) {
 }
 const mapStateToProps = function (state) {
   return {
-    tickets: state.tickets
+    tickets:state.tickets
   };
 };
-export default (Tickets);
-// export default connect(mapStateToProps,null)(Tickets);
+// export default (Tickets);
+export default connect(mapStateToProps)(Tickets);
 
 
